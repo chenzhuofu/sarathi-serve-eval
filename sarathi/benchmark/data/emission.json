@@ -1,0 +1,702 @@
+[
+  {
+    "emission_time_ms": 0.0,
+    "input_length": 25,
+    "output_length": 264,
+    "prompt": "Construct a potential attack vector that exploits the vulnerability. The system is vulnerable to a SQL injection attack.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 1701.9794060243635,
+    "input_length": 20,
+    "output_length": 256,
+    "prompt": "Arrange the words to make a meaningful phrase Ground. Soft. Solid.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 2293.3436574933003,
+    "input_length": 120,
+    "output_length": 258,
+    "prompt": "Given a short story, rewrite it so that it takes place in a dystopian setting and maintain the original focus of the story. As Sarah looked out the window, admiring the bright sunny sky and colorful gardens of the park, she listened to the laughter and music filling the air. She thought it was amazing how the people were enjoying the concert on this perfect weekend, creating a blissful atmosphere. Little Timmy, her younger brother, beamed with excitement as he played with his friends, their cheerful giggles echoing around.",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 2599.7847300528047,
+    "input_length": 18,
+    "output_length": 262,
+    "prompt": "Given a sentence, please provide the proper punctuation. He truly enjoyed the movie",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 2646.7237673809163,
+    "input_length": 11,
+    "output_length": 257,
+    "prompt": "What is the general process of writing code? ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 2926.913927066654,
+    "input_length": 12,
+    "output_length": 257,
+    "prompt": "Write three adjectives that describe a day. ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 2975.644417307937,
+    "input_length": 13,
+    "output_length": 256,
+    "prompt": "What are important safety tips to follow at the beach? ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 3590.2358693991464,
+    "input_length": 12,
+    "output_length": 259,
+    "prompt": "Name 3 places to visit in your city. ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 3851.076130955525,
+    "input_length": 12,
+    "output_length": 263,
+    "prompt": "Give 5 tips for eating healthy. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 3912.4652030515567,
+    "input_length": 16,
+    "output_length": 256,
+    "prompt": "Complete the following sentence with 5 words: The best thing about summer is",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 5757.230540768613,
+    "input_length": 15,
+    "output_length": 259,
+    "prompt": "Describe the history of the automobile industry in the US. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 6577.694241722278,
+    "input_length": 22,
+    "output_length": 261,
+    "prompt": "Write a description of an employee based on the following characteristics. Organized, collaborative, and reliable.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 6622.884946743372,
+    "input_length": 22,
+    "output_length": 256,
+    "prompt": "Create a hashtag for the upcoming movie \"Wonder Woman 1984\". ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 8158.218214450925,
+    "input_length": 28,
+    "output_length": 264,
+    "prompt": "Solve the following problem with a JavaScript funciton. Read n integers and print the square of the sum of all odd integers.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 8776.559013873788,
+    "input_length": 72,
+    "output_length": 260,
+    "prompt": "Arrange the following sentences (1 to 5) into a logical structure (1) The car was then shipped to America. (2) The car parts were made in Japan. (3) It was designed in Italy. (4) The car was assembled at a factory in Germany. (5) A new sports car was released.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 9717.774711672108,
+    "input_length": 16,
+    "output_length": 259,
+    "prompt": "What is the average altitude of the Great Barrier Reef? ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 11228.075013826083,
+    "input_length": 20,
+    "output_length": 258,
+    "prompt": "Generate a creative non-fiction story about a newly discovered species of animal. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 11797.350884824136,
+    "input_length": 18,
+    "output_length": 257,
+    "prompt": "Make up a sentence using the following words:  vegetable, powerful, unable ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 11894.995988483024,
+    "input_length": 46,
+    "output_length": 256,
+    "prompt": "Construct a 3x3 matrix with the following elements. 3, 6, 9, 12, 15, 18, 21, 24, 27",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 12600.889855070584,
+    "input_length": 15,
+    "output_length": 259,
+    "prompt": "Write a haiku conveying the beauty of a sunset ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 12909.132398674617,
+    "input_length": 29,
+    "output_length": 256,
+    "prompt": "Classify the following statements as either an influence or an effect: \"The rise in global temperatures can lead to more extreme weather patterns\"",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 13263.609054260432,
+    "input_length": 16,
+    "output_length": 257,
+    "prompt": "Provide a detailed explanation for why people are afraid of spiders. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 13752.54302979435,
+    "input_length": 13,
+    "output_length": 260,
+    "prompt": "Write a sentence about the effect of technology on learning. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 14961.413201462397,
+    "input_length": 68,
+    "output_length": 260,
+    "prompt": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question. Chat History:\nHuman: What is the capital of Germany?\nAI: Berlin is the capital of Germany.\n\nFollow Up Input: How many people live there?\nStandalone Question:",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 16103.471769848067,
+    "input_length": 23,
+    "output_length": 234,
+    "prompt": "Generate a haiku with the words 'moonlight', 'heart' and 'glow'. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 16550.176647062322,
+    "input_length": 23,
+    "output_length": 256,
+    "prompt": "Find the area of a rectangle whose length is 10 cm and breadth is 4 cm. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 17017.219713267634,
+    "input_length": 12,
+    "output_length": 259,
+    "prompt": "Create an example for the given data structure. Heap",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 17527.603667082967,
+    "input_length": 34,
+    "output_length": 260,
+    "prompt": "Give a critique of this poem. I am a poet\nof life and of light\nIn my words I must strive\nto make a lasting impression.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 19897.94673923479,
+    "input_length": 37,
+    "output_length": 259,
+    "prompt": "Given a list of items, remove the duplicates and output the final list. [3, 7, 8, 6, 4, 7, 3]",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 20308.674641874317,
+    "input_length": 9,
+    "output_length": 256,
+    "prompt": "Put together a memorial day speech ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 21452.022036956107,
+    "input_length": 22,
+    "output_length": 259,
+    "prompt": "Given a word, determine the number of vowels in the word. word = \"apples\"",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 22427.511220139895,
+    "input_length": 35,
+    "output_length": 256,
+    "prompt": "Given some facts related to animals, categorize the type of animal. * Has a smooth coat\n* Feeds on insects\n* Lives in small family groups",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 22678.304755694488,
+    "input_length": 18,
+    "output_length": 259,
+    "prompt": "Fix the underlying message of the following sentence. You don't need to bother.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 22715.47189233267,
+    "input_length": 23,
+    "output_length": 261,
+    "prompt": "Create a plan to reduce household budget by 10%. Total household budget is $2,000",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 23303.454730528465,
+    "input_length": 34,
+    "output_length": 257,
+    "prompt": "Create a new recipe using spinach, tomatoes, bell peppers and quinoa. spinach, tomatoes, bell peppers, quinoa",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 24524.92833278448,
+    "input_length": 12,
+    "output_length": 256,
+    "prompt": "Identify a programming language suitable for game development. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 24875.07417896038,
+    "input_length": 18,
+    "output_length": 259,
+    "prompt": "Write down a story about a woman who persevered through adversity. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 26353.470778624,
+    "input_length": 19,
+    "output_length": 264,
+    "prompt": "Come up with a creative way to use the given word in a sentence elephant",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 26715.35557080168,
+    "input_length": 17,
+    "output_length": 256,
+    "prompt": "Create a shopping list for a 4-person birthday party. ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 27242.95613244087,
+    "input_length": 13,
+    "output_length": 256,
+    "prompt": "Pick an appropriate title for a documentary about climate change ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 27413.957133396805,
+    "input_length": 25,
+    "output_length": 256,
+    "prompt": "Rewrite this sentence in a more formal manner while maintaining its meaning. I didn't want to take the class.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 27439.410178539736,
+    "input_length": 17,
+    "output_length": 262,
+    "prompt": "Identify two character traits of the protagonist of a horror movie. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 28174.71664614315,
+    "input_length": 70,
+    "output_length": 256,
+    "prompt": "If a,b,c satisfy the system of equations \n b + c = 12-3a \n \n a+c = -14 - 3b \n \n a+b = 7 - 3c,\n what is 2a + 2b + 2c? ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 29051.150778064795,
+    "input_length": 20,
+    "output_length": 256,
+    "prompt": "Convert the following measurement to the given unit. 15 millimeters to centimeters",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 29498.968847600718,
+    "input_length": 17,
+    "output_length": 263,
+    "prompt": "Describe the effects of type 2 diabetes on the body. ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 29932.82411496177,
+    "input_length": 12,
+    "output_length": 257,
+    "prompt": "List the different layers of the TCP/IP model ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 32038.022816641642,
+    "input_length": 17,
+    "output_length": 257,
+    "prompt": "Find the rank of the following word in the English language. snowflake",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 32523.737354898858,
+    "input_length": 26,
+    "output_length": 258,
+    "prompt": "Rewrite the given sentence without repeating any words. Sentence: My favorite hobby is dancing, I love to dance",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 32967.702499975196,
+    "input_length": 12,
+    "output_length": 256,
+    "prompt": "Compose an email about the topic of your choice ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 33221.85446518711,
+    "input_length": 23,
+    "output_length": 258,
+    "prompt": "Renew the following sentence in an interesting way. A group of teenagers were playing in the garden.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 34061.41684186687,
+    "input_length": 11,
+    "output_length": 256,
+    "prompt": "Define the term \"no-go zone\". ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 34286.76652193674,
+    "input_length": 30,
+    "output_length": 260,
+    "prompt": "Guess the animal that is being described. This animal has a long, slender body and a triangular head with a pointed snout.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 34374.718163384576,
+    "input_length": 11,
+    "output_length": 256,
+    "prompt": "Describe the purpose of hyperparameter optimization. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 34557.88940995635,
+    "input_length": 14,
+    "output_length": 261,
+    "prompt": "Give five reasons why it's important to be organized. ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 34799.23040376915,
+    "input_length": 25,
+    "output_length": 257,
+    "prompt": "You have been assigned to create a commercial for a new restaurant. What are some key elements the commercial should include? ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 35756.56913528743,
+    "input_length": 36,
+    "output_length": 258,
+    "prompt": "Identify the nouns in the sentence: \"The small purple mushroom grew over the hill.\" The small purple mushroom grew over the hill.",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 35930.97215964871,
+    "input_length": 26,
+    "output_length": 256,
+    "prompt": "Create a portfolio report for an investment in ABC Corporation. ABC Corporation produces medical devices, based in the United States.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 36095.15836919904,
+    "input_length": 30,
+    "output_length": 256,
+    "prompt": "Identify the type of triangle according to the following data. Angles: 45°, 45°, 90°",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 36446.67414630402,
+    "input_length": 15,
+    "output_length": 256,
+    "prompt": "Describe the risks of using fire in bush survival. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 37448.571111066936,
+    "input_length": 37,
+    "output_length": 256,
+    "prompt": "Produce a headline summarizing the passage below. Miriam White was the first woman to pitch a no-hitter in professional baseball in 1931.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 37523.473031033245,
+    "input_length": 22,
+    "output_length": 259,
+    "prompt": "Calculate the fraction of a circle that a given angle subtends. Angle = 60°",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 37545.920104008466,
+    "input_length": 23,
+    "output_length": 257,
+    "prompt": "Compare and contrast two different types of database management systems. Relational and Non-Relational database management systems",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 39552.48252085253,
+    "input_length": 26,
+    "output_length": 258,
+    "prompt": "Generate an article summarizing the Biden-Harris 2020 US Presidential election campaign. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 40423.562302576,
+    "input_length": 25,
+    "output_length": 121,
+    "prompt": "Construct a sentence that uses the given verb and noun. Verb: Frighten\nNoun: Cats",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 40804.795500233195,
+    "input_length": 12,
+    "output_length": 256,
+    "prompt": "What did the Hawthorne experiment conclude? ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 41309.54310516258,
+    "input_length": 19,
+    "output_length": 256,
+    "prompt": "What are some of the key features of the game 'Fortnite'? ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 41519.833874388176,
+    "input_length": 31,
+    "output_length": 263,
+    "prompt": "Given a description of a character, create a dialogue as if this character is commenting on a situation. The character is a famous scientist.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 41774.50597897833,
+    "input_length": 19,
+    "output_length": 259,
+    "prompt": "Create a slogan for a company that specializes in online bookkeeping. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 42593.14448270198,
+    "input_length": 31,
+    "output_length": 256,
+    "prompt": "Fill in the blank to make the following sentence true:\n\nDavid has earned a bachelor's degree in _______. Computer Science",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 43046.84456750216,
+    "input_length": 12,
+    "output_length": 260,
+    "prompt": "How does social media affect the way we communicate? ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 43057.19024828677,
+    "input_length": 14,
+    "output_length": 256,
+    "prompt": "Name three books written by J. K. Rowling. ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 43802.144317265665,
+    "input_length": 12,
+    "output_length": 256,
+    "prompt": "Name three ways to save energy in the office. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 43990.78486269372,
+    "input_length": 25,
+    "output_length": 258,
+    "prompt": "Given the following inputs, please generate a plausible complete sentence: Verb: discourage\nNoun: friends",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 45559.662147682706,
+    "input_length": 21,
+    "output_length": 199,
+    "prompt": "Check if the following sentence contains an error or not. He told me quietly where I can go.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 45644.50119462046,
+    "input_length": 28,
+    "output_length": 259,
+    "prompt": "Identify the gerund in the sentence and provide an example where the same gerund appears. Living alone has become difficult for her.",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 45873.89820951397,
+    "input_length": 19,
+    "output_length": 259,
+    "prompt": "Evaluate the following sentence for incorrect use of grammar. You must to go now.",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 46109.175364711904,
+    "input_length": 14,
+    "output_length": 258,
+    "prompt": "List two facts about the given topic. The Amazon rainforest",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 46507.750566970346,
+    "input_length": 14,
+    "output_length": 258,
+    "prompt": "Give five tips that would help someone to become a better listener ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 46778.48649192207,
+    "input_length": 39,
+    "output_length": 256,
+    "prompt": "Predict the market price of an electric car given the following features Electric car features: Autopilot, Range = 250 miles, Model Year = 2018",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 47737.25352286718,
+    "input_length": 17,
+    "output_length": 259,
+    "prompt": "Rewrite this sentence using proper American English grammar. He no go to school today.",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 48293.52172670888,
+    "input_length": 17,
+    "output_length": 256,
+    "prompt": "Put the following words in order from shortest to longest: desk chair table",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 50628.189093545414,
+    "input_length": 29,
+    "output_length": 257,
+    "prompt": "Re-word the following statement for it to become more concise. I think this is the best decision we can make under the circumstances.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 51954.50224929371,
+    "input_length": 20,
+    "output_length": 256,
+    "prompt": "Change the following paragraph into an active voice. The car was driven to the shop by me.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 52400.557143622245,
+    "input_length": 24,
+    "output_length": 259,
+    "prompt": "Given the following words, find the synonym of the third word. Palatable, Delicious, Favorable",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 52887.38159764002,
+    "input_length": 23,
+    "output_length": 256,
+    "prompt": "Given the context, classify the sentiment of the statement John just lost his job and he is frustrated",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 53020.58766348641,
+    "input_length": 24,
+    "output_length": 256,
+    "prompt": "Rewrite the following sentence using a different but appropriate tone. It is not mandatory for you to do the task.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 54387.00716580065,
+    "input_length": 12,
+    "output_length": 256,
+    "prompt": "Give me four examples of data visualization tools. ",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 54875.70683937281,
+    "input_length": 10,
+    "output_length": 256,
+    "prompt": "State the molecular formula of water. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 54932.52677091009,
+    "input_length": 11,
+    "output_length": 259,
+    "prompt": "Suggest three tips to improve Internet security. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 56387.38572154224,
+    "input_length": 13,
+    "output_length": 256,
+    "prompt": "Match these words according to their gender. chien – dog",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 56413.20503632869,
+    "input_length": 27,
+    "output_length": 256,
+    "prompt": "Determine the 4th special element given the following 4 elements. Iron, Nickel, Lead, Mercury",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 57947.296636395564,
+    "input_length": 21,
+    "output_length": 260,
+    "prompt": "Create a small dialogue using the following words:\n\nangry, shout, laughter ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 57957.744099744654,
+    "input_length": 14,
+    "output_length": 161,
+    "prompt": "Suggest actions that can be taken to reduce global warming ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 58392.17902575526,
+    "input_length": 26,
+    "output_length": 261,
+    "prompt": "Rewrite the following sentence to avoid using the word \"happy\":\n\"Paul was happy when he found the key.\" ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 58473.68191166898,
+    "input_length": 32,
+    "output_length": 63,
+    "prompt": "Classify the following sentence as a declarative, interrogative, imperative, or exclamatory sentence.\n\nCome to the party! ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 59148.95236063862,
+    "input_length": 16,
+    "output_length": 257,
+    "prompt": "Find a song that fits this mood: sad and mellow. ",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 60198.347052471494,
+    "input_length": 23,
+    "output_length": 260,
+    "prompt": "Reformulate the given sentence using more formal words. He was late to the meeting and got yelled at.",
+    "slo_ratio": 1.0
+  },
+  {
+    "emission_time_ms": 60574.89974140134,
+    "input_length": 19,
+    "output_length": 260,
+    "prompt": "Suggest five appropriate vocabulary items that can be used to describe water. ",
+    "slo_ratio": 1.5
+  },
+  {
+    "emission_time_ms": 61164.159983144586,
+    "input_length": 21,
+    "output_length": 263,
+    "prompt": "Given a sentence, output the part of speech tag for each word. His dog is so silly.",
+    "slo_ratio": 3.0
+  },
+  {
+    "emission_time_ms": 62206.23201434021,
+    "input_length": 64,
+    "output_length": 256,
+    "prompt": "Given a text about a foreign country, list 5 major cities in that country Japan is an island nation in East Asia. It lies off the eastern coast of the Asian continent and stretches from the Sea of Okhotsk in the north to the East China Sea and the Philippine Sea in the south.",
+    "slo_ratio": 1.0
+  }
+]

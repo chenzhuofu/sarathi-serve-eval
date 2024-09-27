@@ -20,7 +20,8 @@ class TraceRequestGenerator(BaseRequestGenerator):
 
     def __init__(self, config: TraceRequestGeneratorConfig):
         super().__init__(config)
-
+        # Set the trace file path
+        self._trace_file = config.trace_file
         # load into a pd dataframe
         self.trace_df = pd.read_csv(config.trace_file)
         # restrict trace_df to be a subset of rows that have the same date
