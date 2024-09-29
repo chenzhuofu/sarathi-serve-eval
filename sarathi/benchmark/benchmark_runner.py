@@ -1,10 +1,12 @@
 import logging
 import os
+import json
 import time
 
 import ray
 import wandb
 from tqdm import tqdm
+import pandas as pd
 
 from sarathi import LLMEngine, SamplingParams
 from sarathi.benchmark.config import BenchmarkConfig
@@ -29,6 +31,11 @@ class BenchmarkRunner:
     ) -> None:
         self.replica_id = replica_id
         self.config = config
+        self.total_requests = 0
+        self.slo_attained_requests = 0
+        self.slo_attained_tokens = 0
+        self.total_time = 0
+        self.baseline_latency_ms = config.baseline_latency_ms
 
         replica_config = ReplicaConfig(
             replica_id,
@@ -113,9 +120,20 @@ class BenchmarkRunner:
             for output in step_outputs:
                 if output.finished:
                     num_processed_requests += 1
+                    self.total_requests += 1
+                    request = self.requests[num_processed_requests - 1]  # Get the corresponding request
+                    
+                    # Calculate decode time
+                    decode_time = (output.finished_at - output.prompt_processing_end) * 1000  # Convert to milliseconds
+                    
+                    slo_target = request.slo_ratio * self.baseline_latency_ms * request.num_decode_tokens
+                    if decode_time <= slo_target:
+                        self.slo_attained_requests += 1
+                        self.slo_attained_tokens += request.total_tokens
                     pbar.update(1)
 
         end_time = time.monotonic()
+        self.total_time = end_time - start_time
         pbar.close()
 
         logger.info(
@@ -142,7 +160,18 @@ class BenchmarkRunner:
         self.llm_engine.pull_worker_metrics()
         metric_store = self.llm_engine.get_metric_store()
         return metric_store
-
+        
+    def get_statistics(self) -> dict:
+        slo_attainment = self.slo_attained_requests / self.total_requests if self.total_requests > 0 else 0
+        goodput = self.slo_attained_tokens / self.total_time if self.total_time > 0 else 0
+        return {
+            "slo_attainment": slo_attainment,
+            "goodput": goodput,
+            "total_requests": self.total_requests,
+            "slo_attained_requests": self.slo_attained_requests,
+            "slo_attained_tokens": self.slo_attained_tokens,
+            "total_time": self.total_time,
+        }
 
 class BenchmarkRunnerLauncher:
 
@@ -258,12 +287,54 @@ class BenchmarkRunnerLauncher:
         metrics_store.mark_initial_memory_profiling_done()
 
         return metrics_store
+    
+    def _format_statistics(self, stats: dict) -> str:
+        return (
+            f"SLO Attainment: {stats['slo_attainment']:.2%}\n"
+            f"Goodput: {stats['goodput']:.2f} tokens/second\n"
+            f"Total Requests: {stats['total_requests']}\n"
+            f"SLO Attained Requests: {stats['slo_attained_requests']}\n"
+            f"SLO Attained Tokens: {stats['slo_attained_tokens']}\n"
+            f"Total Time: {stats['total_time']:.2f} seconds\n"
+        )
+        
+    def _write_statistics_to_file(self, stats: dict) -> None:
+        output_dir = self.config.output_dir
+        os.makedirs(output_dir, exist_ok=True)
+        stats_file = os.path.join(output_dir, "benchmark_statistics.txt")
+        
+        with open(stats_file, "w") as f:
+            f.write(self._format_statistics(stats))
+            f.write("\nRaw Statistics:\n")
+            json.dump(stats, f, indent=2)
+        
+        logger.info(f"Statistics written to {stats_file}")
 
     def run(self):
         if self.is_multi_replica:
             ray.get([runner.warmup.remote() for runner in self.runners])
 
             runner_metrics = ray.get([runner.run.remote() for runner in self.runners])
+            runner_statistics = ray.get([runner.get_statistics.remote() for runner in self.runners])
+            
+            # Aggregate statistics
+            total_requests = sum(stats['total_requests'] for stats in runner_statistics)
+            slo_attained_requests = sum(stats['slo_attained_requests'] for stats in runner_statistics)
+            slo_attained_tokens = sum(stats['slo_attained_tokens'] for stats in runner_statistics)
+            total_time = max(stats['total_time'] for stats in runner_statistics)
+
+            aggregated_stats = {
+                "slo_attainment": slo_attained_requests / total_requests if total_requests > 0 else 0,
+                "goodput": slo_attained_tokens / total_time if total_time > 0 else 0,
+                "total_requests": total_requests,
+                "slo_attained_requests": slo_attained_requests,
+                "slo_attained_tokens": slo_attained_tokens,
+                "total_time": total_time,
+            }
+
+            print("\nBenchmark Statistics:")
+            print(self._format_statistics(aggregated_stats))
+            self._write_statistics_to_file(aggregated_stats)
 
             for runner_metric in runner_metrics:
                 self.aggregate_metric_store.merge(runner_metric)
@@ -274,6 +345,12 @@ class BenchmarkRunnerLauncher:
             self.aggregate_metric_store.plot()
         else:
             metric_store = self.runners[0].run()
+            statistics = self.runners[0].get_statistics()
+            
+            print("\nBenchmark Statistics:")
+            print(self._format_statistics(statistics))
+            self._write_statistics_to_file(statistics)
+            
             metric_store.plot()
 
         wandb.finish()

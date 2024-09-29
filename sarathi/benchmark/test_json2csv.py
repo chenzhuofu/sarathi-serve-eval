@@ -36,9 +36,7 @@ for i, entry in enumerate(data):
     # Calculate a date by adding seconds to the start date
     date = start_date + timedelta(seconds=time_in_seconds)
     
-    # TODO: Calculate request expected latency 
-    # baseline_latency_ms = 1
-    # expected_latency = entry["slo_ratio"] * baseline_latency_ms * completion_tokens 
+    slo_ratio = entry["slo_ratio"]
 
     # Add the processed data to the list
     csv_data.append({
@@ -46,12 +44,13 @@ for i, entry in enumerate(data):
         "Time": time_in_seconds,  # Time since the start in seconds
         "PromptTokenCount": prompt_tokens,  # Estimated prefill tokens
         "CompletionTokenCount": completion_tokens,  # Estimated completion tokens
+        "SLORatio": slo_ratio,
     })
 
 # Create a DataFrame from the list
 df = pd.DataFrame(csv_data)
 
 # Save the DataFrame to a CSV file
-df.to_csv('./data/emission_trace.csv', index=False)
+df.to_csv('./data/emission_trace_slo.csv', index=False)
 
 print("CSV file generated successfully.")
