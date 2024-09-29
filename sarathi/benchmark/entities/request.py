@@ -13,13 +13,16 @@ class Request(BaseEntity):
         arrived_at: float,
         num_prefill_tokens: int,
         num_decode_tokens: int,
+        slo_ratio: float,
     ):
         self._id = Request.generate_id()
         self._arrived_at = arrived_at
         self._num_prefill_tokens = num_prefill_tokens
         self._num_decode_tokens = num_decode_tokens
+        self._slo_ratio = slo_ratio
         assert num_prefill_tokens > 0
         assert num_decode_tokens > 0
+        assert slo_ratio > 0
 
     @property
     def size(self) -> Tuple[int, int]:
@@ -44,6 +47,10 @@ class Request(BaseEntity):
     @property
     def total_tokens(self) -> int:
         return self._num_prefill_tokens + self._num_decode_tokens
+    
+    @property
+    def slo_ratio(self) -> float:
+        return self._slo_ratio
 
     def to_dict(self) -> dict:
         return {
@@ -51,4 +58,5 @@ class Request(BaseEntity):
             "arrived_at": self._arrived_at,
             "num_prefill_tokens": self._num_prefill_tokens,
             "num_decode_tokens": self._num_decode_tokens,
+            "slo_ratio": self._slo_ratio,
         }

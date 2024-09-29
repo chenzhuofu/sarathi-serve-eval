@@ -24,6 +24,9 @@ class RequestOutput:
     token_ids: List[int]
     finished: bool
     finish_reason: Optional[str] = None
+    start_time: float = 0.0
+    prompt_processing_end: float = 0.0
+    finished_at: float = 0.0
 
     @classmethod
     def from_seq(cls, seq: Sequence) -> "RequestOutput":
@@ -35,4 +38,7 @@ class RequestOutput:
             seq.get_output_token_ids(),
             seq.is_finished(),
             SequenceStatus.get_finished_reason(seq.get_status()),
+            seq.state.arrived_at,
+            seq.state.prompt_processing_completed_at,
+            seq.state.completed_at,
         )

@@ -73,6 +73,9 @@ class TraceRequestGenerator(BaseRequestGenerator):
         pd_ratio = (
             self.trace_df["PromptTokenCount"] / self.trace_df["CompletionTokenCount"]
         )
+        
+        assert 'SLORatio' in self.trace_df.columns, "SLORatio column not found in trace file"
+        
         logger.info(
             f"Loaded trace file {self._trace_file} with {len(self.trace_df)} requests"
         )
@@ -88,6 +91,7 @@ class TraceRequestGenerator(BaseRequestGenerator):
                 arrived_at=row["Time"],
                 num_prefill_tokens=row["PromptTokenCount"],
                 num_decode_tokens=row["CompletionTokenCount"],
+                slo_ratio=row["SLORatio"],
             )
 
             requests.append(request)

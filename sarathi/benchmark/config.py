@@ -240,6 +240,10 @@ class BenchmarkConfig(BaseEndpointConfig):
     request_generator_config: BaseRequestGeneratorConfig = field(
         default_factory=SyntheticRequestGeneratorConfig
     )
+    baseline_latency_ms: float = field(
+        default=1.0,
+        metadata={"help": "Baseline latency in milliseconds per token"},
+    )
 
     def __post_init__(self):
         super().__post_init__()
