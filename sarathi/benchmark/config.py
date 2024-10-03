@@ -43,7 +43,7 @@ class TraceRequestIntervalGeneratorConfig(BaseRequestIntervalGeneratorConfig):
         default="1970-01-04 15:00:00", metadata={"help": "End time for the trace."}
     )
     time_scale_factor: float = field(
-        default=0.3,
+        default=1.0,
         metadata={"help": "Factor to scale the time intervals in the trace."},
     )
 
@@ -198,13 +198,13 @@ class TraceRequestGeneratorConfig(BaseRequestGeneratorConfig):
         default="2023-08-21", metadata={"help": "Date for the trace data."}
     )
     prefill_scale_factor: float = field(
-        default=0.3, metadata={"help": "Scale factor for prefill tokens."}
+        default=1.0, metadata={"help": "Scale factor for prefill tokens."}
     )
     decode_scale_factor: float = field(
-        default=1, metadata={"help": "Scale factor for decode tokens."}
+        default=1.0, metadata={"help": "Scale factor for decode tokens."}
     )
     time_scale_factor: float = field(
-        default=0.04, metadata={"help": "Scale factor for time intervals."}
+        default=1.0, metadata={"help": "Scale factor for time intervals."}
     )
     max_tokens: int = field(
         default=4096, metadata={"help": "Maximum number of tokens allowed."}
@@ -241,8 +241,13 @@ class BenchmarkConfig(BaseEndpointConfig):
         default_factory=SyntheticRequestGeneratorConfig
     )
     baseline_latency_ms: float = field(
-        default=1.0,
-        metadata={"help": "Baseline latency in milliseconds per token"},
+        default=1.0, metadata={"help": "Baseline latency in milliseconds per token"},
+    )
+    tensor_parallel_size: int = field(
+        default=1, metadata={"help": "Size of tensor parallelism."}
+    )
+    pipeline_parallel_size: int = field(
+        default=1, metadata={"help": "Size of pipeline parallelism."}
     )
 
     def __post_init__(self):
@@ -250,3 +255,8 @@ class BenchmarkConfig(BaseEndpointConfig):
 
         if not self.time_limit:
             self.time_limit = float("inf")
+            
+        # Update the ParallelConfig with the new values
+        self.parallel_config.tensor_parallel_size = self.tensor_parallel_size
+        self.parallel_config.pipeline_parallel_size = self.pipeline_parallel_size
+        self.parallel_config.world_size = self.tensor_parallel_size * self.pipeline_parallel_size
