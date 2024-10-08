@@ -90,7 +90,7 @@ class TraceRequestGenerator(BaseRequestGenerator):
             request = Request(
                 arrived_at=row["Time"],
                 num_prefill_tokens=row["PromptTokenCount"],
-                num_decode_tokens=row["CompletionTokenCount"],
+                num_decode_tokens=row["CompletionTokenCount"] - row["PromptTokenCount"],
                 slo_ratio=row["SLORatio"],
             )
 
