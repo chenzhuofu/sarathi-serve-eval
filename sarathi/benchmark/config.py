@@ -222,6 +222,9 @@ class BenchmarkConfig(BaseEndpointConfig):
         default="benchmark_output",
         metadata={"help": "Directory to store benchmark output."},
     )
+    output_file: Optional[str] = field(
+        default=None, metadata={"help": "File to store benchmark output."}
+    )
     write_json_trace: bool = field(
         default=True, metadata={"help": "Whether to write JSON trace output."}
     )

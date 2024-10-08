@@ -300,6 +300,7 @@ class BenchmarkRunnerLauncher:
         
     def _write_statistics_to_file(self, stats: dict) -> None:
         output_dir = self.config.output_dir
+        output_file = self.config.output_file
         os.makedirs(output_dir, exist_ok=True)
         stats_file = os.path.join(output_dir, "benchmark_statistics.txt")
         
@@ -307,6 +308,12 @@ class BenchmarkRunnerLauncher:
             f.write(self._format_statistics(stats))
             f.write("\nRaw Statistics:\n")
             json.dump(stats, f, indent=2)
+        
+        if output_file is not None:
+            with open(output_file, "w") as f:
+                f.write(self._format_statistics(stats))
+                f.write("\nRaw Statistics:\n")
+                json.dump(stats, f, indent=2)
         
         logger.info(f"Statistics written to {stats_file}")
 
