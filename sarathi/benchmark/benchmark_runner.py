@@ -129,7 +129,7 @@ class BenchmarkRunner:
                     slo_target = request.slo_ratio * self.baseline_latency_ms * request.num_decode_tokens
                     if decode_time <= slo_target:
                         self.slo_attained_requests += 1
-                        self.slo_attained_tokens += request.total_tokens
+                        self.slo_attained_tokens += request.num_decode_tokens
                     pbar.update(1)
 
         end_time = time.monotonic()
