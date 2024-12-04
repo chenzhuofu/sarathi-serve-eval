@@ -22,7 +22,7 @@ class Request(BaseEntity):
         self._slo_ratio = slo_ratio
         assert num_prefill_tokens > 0
         assert num_decode_tokens > 0
-        assert slo_ratio > 0
+        # assert slo_ratio > 0
 
     @property
     def size(self) -> Tuple[int, int]:

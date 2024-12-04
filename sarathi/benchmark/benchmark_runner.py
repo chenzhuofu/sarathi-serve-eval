@@ -131,7 +131,7 @@ class BenchmarkRunner:
                         self.tpots[request.slo_ratio] = []
                     self.tpots[request.slo_ratio].append(tpot)
 
-                    slo_target = request.slo_ratio * self.baseline_latency_ms * request.num_decode_tokens
+                    slo_target = (request.slo_ratio * self.baseline_latency_ms if request.slo_ratio >= 0 else -request.slo_ratio) * request.num_decode_tokens
                     if decode_time <= slo_target:
                         self.slo_attained_requests += 1
                         self.slo_attained_tokens += request.num_decode_tokens
